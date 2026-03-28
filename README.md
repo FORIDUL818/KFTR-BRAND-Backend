@@ -79,8 +79,8 @@ server/
 
 ## Technologies Used
 
-- **Node.js** - JavaScript runtime
 - **Express.js** - Web framework for Node.js
+- **Node.js** - JavaScript runtime
 - **MongoDB** - NoSQL database (via Mongoose ODM)
 - **JSONWebToken** - For authentication
 - **bcrypt** - For password hashing
@@ -103,3 +103,7 @@ API routes are defined in the `src/Routes` directory. Currently, no routes are d
 ## License
 
 This project is licensed under the ISC License - see the [LICENSE](LICENSE) file for details.
+
+
+
+
