@@ -5,14 +5,15 @@ const userSchima = new mongoose.Schema({
     firstName:{
         type:String,
         required:true,
-        maxLength:["maximum text size is 60"],
-        minLength:["minimum text size is 2"]
+         minlength:[3,"first name should be at least 3 characters"],
+         maxlength:[20,"first name should be at most 20 characters"],
     },
     lastName:{
         type:String,
         required:true,
-        maxLength:["maximum text size is 60"],
-        minLength:["minimum text size is 2"]
+        minlength:[3,"last name should be at least 3 characters"],
+        maxlength:[20,"last name should be at most 20 characters"],
+
     },
     email:{
         type:String,
@@ -35,7 +36,7 @@ const userSchima = new mongoose.Schema({
 
     },
     role:{
-        enum:["user","admin","modarator","premeumUser"];
+        enum:["user","admin","modarator","premeumUser"],
         default:"user",
         type:String,
     }
