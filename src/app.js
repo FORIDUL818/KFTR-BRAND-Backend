@@ -12,15 +12,15 @@ app.use(express.json());
 
 // Connect to MongoDB 
 connectDB();
-
-
+ 
+  
 
 // Routes
 
 app.use('/api/users', require('./Router/UserRouter'));
 // app.use('/api/products', require('./routes/products'));
 
-
+ 
 app.get('/', (req, res) => {
   res.send('Welcome to the KFTR API');
 });
