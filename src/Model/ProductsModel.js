@@ -1,5 +1,5 @@
 const  mongoose  = require("mongoose");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 let userScimna = new mongoose.Schema(
     {
         firstName:{
@@ -31,15 +31,19 @@ let userScimna = new mongoose.Schema(
         password:{
             type:String,
             required:true,
-            set: function (v) {
-                return bcrypt.hashSync(bcrypt.genSaltSync(10))
-            }
+            // set: function (v) {
+            //     return bcrypt.hashSync(v,bcrypt.genSaltSync(10))
+            // }
         },
         
-    role:{
-    enam:["user","admin","moderatior"],
-    default:"user"
-    }
+  role: {
+    type: String,
+    enum: {
+      values: ["user", "admin", "moderator"],
+      message: "{VALUE} is not a valid role",
+    },
+    default: "admin",
+  },
 
     },{timeseries:true,versionKey:false} )
 
