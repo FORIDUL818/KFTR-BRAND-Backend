@@ -16,7 +16,8 @@ connectDB();
 
 
 // Routes
-// app.use('/api/auth', require('./routes/auth'));
+
+app.use('/api/users', require('./Router/UserRouter'));
 // app.use('/api/products', require('./routes/products'));
 
 
